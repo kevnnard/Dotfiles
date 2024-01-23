@@ -1,4 +1,28 @@
 return {
+	{
+	  'stevearc/oil.nvim',
+	  opts = {},
+	  -- Optional dependencies
+	  dependencies = { "nvim-tree/nvim-web-devicons" },
+	},
+	{
+	  "folke/todo-comments.nvim",
+	  dependencies = { "nvim-lua/plenary.nvim" },
+	  opts = {
+	    -- your configuration comes here
+	    -- or leave it empty to use the default settings
+	    -- refer to the configuration section below
+	  }
+	},
+	{
+	  "roobert/tailwindcss-colorizer-cmp.nvim",
+	  -- optionally, override the default options:
+	  config = function()
+	    require("tailwindcss-colorizer-cmp").setup({
+	      color_square_width = 2,
+	    })
+	  end
+	},
 	-- Create annotations with one keybind, and jump your cursor in the inserted annotation
 	{
 		"danymat/neogen",

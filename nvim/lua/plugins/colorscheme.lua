@@ -6,9 +6,7 @@ return {
 		opts = function()
 			return {
 				transparent = true,
-				styles = {
-					variable = { 'warn' },
-				},
+				flavor = "warn",
 			}
 		end,
 	},

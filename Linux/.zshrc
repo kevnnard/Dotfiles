@@ -17,7 +17,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -72,12 +71,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 plugins=(git docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
@@ -90,11 +89,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='nvim'
 # else
 #   export EDITOR='mvim'
-# fi
+#fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -107,27 +106,38 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /Users/kevnnard/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/kevnnard/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # fnm
-export PATH="/Users/kevnnard/Library/Application Support/fnm:$PATH"
+export PATH="/home/kevnnard/.fnm:$PATH"
 eval "`fnm env`"
 
 # pnpm
-export PNPM_HOME="/Users/kevnnard/Library/pnpm"
+export PNPM_HOME="/home/kevnnard/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+#
+#
+#
+# ALIASES                                                             
 
+alias n="nvim ."
+alias nv="nvim"
 
-# ALIAS
-alias nv='nvim'
-alias nv.='nvim .'
-alias pm='pnpm'
-alias pmv='curl -fsSL https://get.pnpm.io/install.sh | sh -'
-alias lg='lazygit'
+alias lg="lazygit"
+
+alias pm="pnpm"
+alias pmi="pnpm i"
+alias pma="pnpm add"
+alias pmb="pnpm run build"
+alias pmd="pnpm run dev"
+alias pmg="pnpm start"
+alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
+
+alias sshc="ssh -i ~/.ssh/"

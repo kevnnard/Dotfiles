@@ -1,11 +1,34 @@
 return {
   {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          visible = true,
+        },
+      },
+    },
+  },
+  {
     "vuki656/package-info.nvim",
     requires = "MunifTanjim/nui.nvim",
   },
   {
     "stevearc/oil.nvim",
-    opts = {},
+    opts = {
+      columns = {
+        "icon",
+      },
+      view_options = {
+        show_hidden = true,
+        is_hidden_file = function(name, bufnr)
+          return vim.startswith(name, ".")
+        end,
+        is_always_hidden = function(name, bufnr)
+          return false
+        end,
+      },
+    },
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },

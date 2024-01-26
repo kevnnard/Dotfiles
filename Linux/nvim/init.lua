@@ -8,7 +8,9 @@ end
 vim.print = _G.dd
 
 require("config.lazy")
-require("oil").setup()
 require("gitsigns").setup()
 require("lspconfig").pyright.setup({})
 require("package-info").setup()
+require("notify").setup({
+  background_colour = "#000000",
+})

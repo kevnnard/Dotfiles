@@ -141,3 +141,10 @@ alias pmg="pnpm start"
 alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
 
 alias sshc="ssh -i ~/.ssh/"
+
+# bun completions
+[ -s "/home/kevnnard/.bun/_bun" ] && source "/home/kevnnard/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

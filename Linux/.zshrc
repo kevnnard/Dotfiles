@@ -123,12 +123,18 @@ case ":$PATH:" in
 esac
 # pnpm end
 #
+
+# bun completions
+[ -s "/home/kevnnard/.bun/_bun" ] && source "/home/kevnnard/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 #
 #
 # ALIASES                                                             
 
-alias n="nvim ."
-alias nv="nvim"
+alias vm="nvim"
 
 alias lg="lazygit"
 
@@ -140,11 +146,5 @@ alias pmd="pnpm run dev"
 alias pmg="pnpm start"
 alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
 
-alias sshc="ssh -i ~/.ssh/"
+alias sshc="ssh -i ~/.ssh"
 
-# bun completions
-[ -s "/home/kevnnard/.bun/_bun" ] && source "/home/kevnnard/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"

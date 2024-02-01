@@ -146,5 +146,15 @@ alias pmd="pnpm run dev"
 alias pmg="pnpm start"
 alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
 
+# Bun ALIASES 
+alias buna="bun add"
+alias buni="bun install"
+alias bunr="bun remove"
+alias bunr="bun run"
+alias bund="bun run dev"
+alias bunb="bun run build"
+alias buns="bun run start"
+alias bunv="curl -fsSL https://bun.sh/install | bash"
+
 alias sshc="ssh -i ~/.ssh"
 

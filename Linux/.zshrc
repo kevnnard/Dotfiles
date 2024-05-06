@@ -131,19 +131,24 @@ esac
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 #
-#
-# ALIASES                                                             
+## ALIASES                                                             
 
+# General ALIASES 
+alias zshrc="nvim ~/.zshrc"
+alias kittyrc="nvim ~/.config/kitty/kitty.conf"
 alias vm="nvim"
-
 alias lg="lazygit"
 
+# pnmp ALIASES
 alias pm="pnpm"
+alias pmu="pnpm up"
 alias pmi="pnpm i"
 alias pma="pnpm add"
 alias pmb="pnpm run build"
 alias pmd="pnpm run dev"
-alias pmg="pnpm start"
+alias pms="pnpm start"
+alias pmr="pnpm store prune"
+alias pmx="pnpm exec"
 alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
 
 # Bun ALIASES 
@@ -156,5 +161,5 @@ alias bunb="bun run build"
 alias buns="bun run start"
 alias bunv="curl -fsSL https://bun.sh/install | bash"
 
+# SSH ALIASES
 alias sshc="ssh -i ~/.ssh"
-

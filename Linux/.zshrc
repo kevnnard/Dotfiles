@@ -163,3 +163,7 @@ alias bunv="curl -fsSL https://bun.sh/install | bash"
 
 # SSH ALIASES
 alias sshc="ssh -i ~/.ssh"
+
+# CD ALIASES
+alias cdb="cd .."
+alias cdd="cd ~/Documents"

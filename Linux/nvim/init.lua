@@ -11,6 +11,4 @@ require("config.lazy")
 require("gitsigns").setup()
 require("lspconfig").pyright.setup({})
 require("package-info").setup()
-require("notify").setup({
-  background_colour = "#000000",
-})
+require("notify").setup()

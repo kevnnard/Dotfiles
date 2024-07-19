@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=(git docker docker-compose)
+plugins=(git docker docker-compose pj)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -135,7 +135,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # General ALIASES 
 alias zshrc="nvim ~/.zshrc"
-alias kittyrc="nvim ~/.config/kitty/kitty.conf"
 alias vm="nvim"
 alias lg="lazygit"
 
@@ -160,10 +159,12 @@ alias bund="bun run dev"
 alias bunb="bun run build"
 alias buns="bun run start"
 alias bunv="curl -fsSL https://bun.sh/install | bash"
-
 # SSH ALIASES
 alias sshc="ssh -i ~/.ssh"
 
 # CD ALIASES
 alias cdb="cd .."
-alias cdd="cd ~/Documents"
+alias cdd="cd ~/Documents/"
+
+# PJ PROJECT ALIASES
+PROJECT_PATHS=(~/Documents ~/Documents/KEVNNARD ~/Documents/THREE ~/Documents/OCMI)

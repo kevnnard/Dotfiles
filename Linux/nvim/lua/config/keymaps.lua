@@ -1,9 +1,9 @@
--- Keymaps are automatically loaded on the VeryLazy event
+--  eymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
 -- VERSION PACKAGES KEYMAPS
--- Show dependency versions
+
 vim.keymap.set(
   { "n" },
   "<LEADER>ns",
@@ -25,6 +25,7 @@ vim.keymap.set(
   { silent = true, noremap = true, desc = "Toggle dependency versions" }
 )
 -- Update dependency on the line
+-----
 vim.keymap.set(
   { "n" },
   "<LEADER>nu",
@@ -57,3 +58,6 @@ vim.keymap.set(
 ------------------------------------------------------------------------------------------------------------------------
 -- OIL KEYMAPS INIT
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- TELESCOPE
+vim.keymap.set("n", "<leader>fx", "<CMD>TodoTelescope<CR>", { desc = "Find Todos" })

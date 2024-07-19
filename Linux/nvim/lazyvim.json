@@ -1,20 +1,5 @@
 {
-  "extras": [
-    "lazyvim.plugins.extras.coding.mini-surround",
-    "lazyvim.plugins.extras.coding.yanky",
-    "lazyvim.plugins.extras.editor.aerial",
-    "lazyvim.plugins.extras.editor.dial",
-    "lazyvim.plugins.extras.editor.inc-rename",
-    "lazyvim.plugins.extras.editor.mini-files",
-    "lazyvim.plugins.extras.lang.tex",
-    "lazyvim.plugins.extras.lang.toml",
-    "lazyvim.plugins.extras.test.core",
-    "lazyvim.plugins.extras.ui.edgy",
-    "lazyvim.plugins.extras.ui.mini-animate",
-    "lazyvim.plugins.extras.util.dot",
-    "lazyvim.plugins.extras.util.octo",
-    "lazyvim.plugins.extras.util.project"
-  ],
+  "extras": [],
   "news": {
     "NEWS.md": "6077",
     "doc/news.txt": "24447"

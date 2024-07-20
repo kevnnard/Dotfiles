@@ -1,17 +1,13 @@
-# 💤 LazyVim
-
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
-
 # Dotfiles/Linux/nvim
 
 <a href="https://dotfyle.com/kevnnard/dotfiles-linux-nvim"><img src="https://dotfyle.com/kevnnard/dotfiles-linux-nvim/badges/plugins?style=flat" /></a>
 <a href="https://dotfyle.com/kevnnard/dotfiles-linux-nvim"><img src="https://dotfyle.com/kevnnard/dotfiles-linux-nvim/badges/leaderkey?style=flat" /></a>
 <a href="https://dotfyle.com/kevnnard/dotfiles-linux-nvim"><img src="https://dotfyle.com/kevnnard/dotfiles-linux-nvim/badges/plugin-manager?style=flat" /></a>
 
+
 ## Install Instructions
 
-> Install requires Neovim 0.9+. Always review the code before installing a configuration.
+ > Install requires Neovim 0.9+. Always review the code before installing a configuration.
 
 Clone the repository and install the plugins:
 
@@ -29,91 +25,77 @@ NVIM_APPNAME=kevnnard/Dotfiles/Linux/nvim nvim
 
 ### colorscheme
 
-- [craftzdog/solarized-osaka.nvim](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
-- [navarasu/onedark.nvim](https://dotfyle.com/plugins/navarasu/onedark.nvim)
-
++ [navarasu/onedark.nvim](https://dotfyle.com/plugins/navarasu/onedark.nvim)
++ [craftzdog/solarized-osaka.nvim](https://dotfyle.com/plugins/craftzdog/solarized-osaka.nvim)
 ### comment
 
-- [danymat/neogen](https://dotfyle.com/plugins/danymat/neogen)
-- [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
-
++ [danymat/neogen](https://dotfyle.com/plugins/danymat/neogen)
++ [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
 ### dependency-management
 
-- [vuki656/package-info.nvim](https://dotfyle.com/plugins/vuki656/package-info.nvim)
-
++ [vuki656/package-info.nvim](https://dotfyle.com/plugins/vuki656/package-info.nvim)
 ### editing-support
 
-- [folke/zen-mode.nvim](https://dotfyle.com/plugins/folke/zen-mode.nvim)
-- [monaqa/dial.nvim](https://dotfyle.com/plugins/monaqa/dial.nvim)
-
++ [folke/zen-mode.nvim](https://dotfyle.com/plugins/folke/zen-mode.nvim)
++ [monaqa/dial.nvim](https://dotfyle.com/plugins/monaqa/dial.nvim)
 ### file-explorer
 
-- [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
-- [stevearc/oil.nvim](https://dotfyle.com/plugins/stevearc/oil.nvim)
++ [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
++ [stevearc/oil.nvim](https://dotfyle.com/plugins/stevearc/oil.nvim)
+### git
 
++ [lewis6991/gitsigns.nvim](https://dotfyle.com/plugins/lewis6991/gitsigns.nvim)
 ### icon
 
-- [nvim-tree/nvim-web-devicons](https://dotfyle.com/plugins/nvim-tree/nvim-web-devicons)
-
++ [nvim-tree/nvim-web-devicons](https://dotfyle.com/plugins/nvim-tree/nvim-web-devicons)
 ### lsp
 
-- [simrat39/symbols-outline.nvim](https://dotfyle.com/plugins/simrat39/symbols-outline.nvim)
-- [smjonas/inc-rename.nvim](https://dotfyle.com/plugins/smjonas/inc-rename.nvim)
-- [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
-
++ [simrat39/symbols-outline.nvim](https://dotfyle.com/plugins/simrat39/symbols-outline.nvim)
++ [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
++ [smjonas/inc-rename.nvim](https://dotfyle.com/plugins/smjonas/inc-rename.nvim)
 ### lsp-installer
 
-- [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
-
++ [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
 ### motion
 
-- [echasnovski/mini.bracketed](https://dotfyle.com/plugins/echasnovski/mini.bracketed)
-
++ [echasnovski/mini.bracketed](https://dotfyle.com/plugins/echasnovski/mini.bracketed)
 ### nvim-dev
 
-- [MunifTanjim/nui.nvim](https://dotfyle.com/plugins/MunifTanjim/nui.nvim)
-- [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
-
++ [MunifTanjim/nui.nvim](https://dotfyle.com/plugins/MunifTanjim/nui.nvim)
++ [nvim-lua/plenary.nvim](https://dotfyle.com/plugins/nvim-lua/plenary.nvim)
 ### plugin-manager
 
-- [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
-
++ [folke/lazy.nvim](https://dotfyle.com/plugins/folke/lazy.nvim)
 ### preconfigured
 
-- [LazyVim/LazyVim](https://dotfyle.com/plugins/LazyVim/LazyVim)
-
++ [LazyVim/LazyVim](https://dotfyle.com/plugins/LazyVim/LazyVim)
 ### startup
 
-- [nvimdev/dashboard-nvim](https://dotfyle.com/plugins/nvimdev/dashboard-nvim)
-
++ [nvimdev/dashboard-nvim](https://dotfyle.com/plugins/nvimdev/dashboard-nvim)
 ### statusline
 
-- [nvim-lualine/lualine.nvim](https://dotfyle.com/plugins/nvim-lualine/lualine.nvim)
-- [b0o/incline.nvim](https://dotfyle.com/plugins/b0o/incline.nvim)
-
++ [nvim-lualine/lualine.nvim](https://dotfyle.com/plugins/nvim-lualine/lualine.nvim)
++ [b0o/incline.nvim](https://dotfyle.com/plugins/b0o/incline.nvim)
 ### syntax
 
-- [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
-
++ [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
 ### tabline
 
-- [akinsho/bufferline.nvim](https://dotfyle.com/plugins/akinsho/bufferline.nvim)
-
++ [akinsho/bufferline.nvim](https://dotfyle.com/plugins/akinsho/bufferline.nvim)
 ### utility
 
-- [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
-- [folke/noice.nvim](https://dotfyle.com/plugins/folke/noice.nvim)
-- [echasnovski/mini.animate](https://dotfyle.com/plugins/echasnovski/mini.animate)
-
++ [rcarriga/nvim-notify](https://dotfyle.com/plugins/rcarriga/nvim-notify)
++ [echasnovski/mini.animate](https://dotfyle.com/plugins/echasnovski/mini.animate)
++ [folke/noice.nvim](https://dotfyle.com/plugins/folke/noice.nvim)
 ### web-development
 
-- [roobert/tailwindcss-colorizer-cmp.nvim](https://dotfyle.com/plugins/roobert/tailwindcss-colorizer-cmp.nvim)
-
++ [roobert/tailwindcss-colorizer-cmp.nvim](https://dotfyle.com/plugins/roobert/tailwindcss-colorizer-cmp.nvim)
 ## Language Servers
 
-- astro
-- cmake
-- graphql
-- svelte
++ astro
++ cmake
++ graphql
++ svelte
 
-This readme was generated by [Dotfyle](https://dotfyle.com) and is available at [kevnnard/dotfiles-linux-nvim](https://dotfyle.com/kevnnard/dotfiles-linux-nvim).
+
+ This readme was generated by [Dotfyle](https://dotfyle.com)

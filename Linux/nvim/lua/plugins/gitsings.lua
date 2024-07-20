@@ -39,6 +39,7 @@ return {
           gs.nav_hunk("prev")
         end
       end, "Prev Hunk")
+      map("n","<leader>gha", ":Gitsigns toggle_current_line_blame<CR>", "Toggle Blame Line")
       map("n", "]H", function() gs.nav_hunk("last") end, "Last Hunk")
       map("n", "[H", function() gs.nav_hunk("first") end, "First Hunk")
       map({ "n", "v" }, "<leader>ghs", ":Gitsigns stage_hunk<CR>", "Stage Hunk")

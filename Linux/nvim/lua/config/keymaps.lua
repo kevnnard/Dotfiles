@@ -61,3 +61,4 @@ vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- TELESCOPE
 vim.keymap.set("n", "<leader>fx", "<CMD>TodoTelescope<CR>", { desc = "Find Todos" })
+vim.keymap.set("n", "<leader>fn", "<CMD>Telescope notify<CR>", { desc = "Find Notifications" })

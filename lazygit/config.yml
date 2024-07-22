@@ -1,0 +1,27 @@
+gui:
+  nerdFontsVersion: "3"
+  authorColors:
+    # use red for John Smith
+    "Kevin Londoño": "#77F1B7"
+    "Kevnnard MacOs": "#77F1B7"
+    "KevnnardFedora": "#77F1B7"
+    # use blue for other authors
+    # "*": "#ff2f05"
+  branchColors:
+    "*": "#34245E"
+    "docs": "#11aaff"
+    "main": "#77F1B7"
+    "master": "#77F1B7"
+    "hotfix": "#ff2f05"
+    "fix": "#ff2f05"
+    "refactor": "#11aaff"
+    "feat": "#F38731"
+  theme:
+    selectedLineBgColor:
+      - reverse
+      - red
+
+git:
+  paging:
+    colorArg: always
+    pager: diff-so-fancy

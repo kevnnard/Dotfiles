@@ -43,6 +43,7 @@ return {
                 includeInlayVariableTypeHints = false,
                 includeInlayPropertyDeclarationTypeHints = true,
                 includeInlayFunctionLikeReturnTypeHints = true,
+                format = "biome",
                 includeInlayEnumMemberValueHints = true,
               },
             },

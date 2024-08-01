@@ -4,7 +4,7 @@ return {
     {
       "<leader>r",
       function()
-        require("refactoring").select_refactor()
+        require("refactoring").select_refactor({})
       end,
       mode = "v",
       noremap = true,

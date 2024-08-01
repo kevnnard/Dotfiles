@@ -14,6 +14,7 @@ return {
       show_repository = false,
       workspace_blacklist = {
         "V3",
+        "DOTFIES",
       },
     },
     lsp = {
@@ -23,6 +24,7 @@ return {
     idle = {
       timeout = 0,
       text = "Thinking...",
+      disable_on_focus = true,
     },
     text = {
       editing = "Working on {}",

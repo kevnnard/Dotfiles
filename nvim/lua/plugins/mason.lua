@@ -1,0 +1,21 @@
+return {
+  "williamboman/mason.nvim",
+  opts = function(_, opts)
+    vim.list_extend(opts.ensure_installed, {
+      "biome",
+      "prettier",
+      "stylua",
+      "selene",
+      "shellcheck",
+      "astro-language-server",
+      "tailwindcss-language-server",
+      "typescript-language-server",
+      "shopify-cli",
+      "shopify-theme-check",
+      "solargraph",
+      "dockerfile-language-server",
+      "docker-compose-language-service",
+      "prisma-language-server",
+    })
+  end,
+}

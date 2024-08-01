@@ -6,15 +6,13 @@ return {
     opts = {
       ensure_installed = {
         "astro",
-        "css",
         "gitignore",
         "go",
         "graphql",
         "http",
         "rust",
-        "scss",
         "sql",
-        "svelte",
+        "prisma",
         "typescript",
         "javascript",
       },

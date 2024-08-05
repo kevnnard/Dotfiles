@@ -16,6 +16,7 @@ return {
       "dockerfile-language-server",
       "docker-compose-language-service",
       "prisma-language-server",
+      "graphql-language-service-cli",
     })
   end,
 }

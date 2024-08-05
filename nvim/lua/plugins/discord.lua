@@ -22,9 +22,9 @@ return {
       severety = 4,
     },
     idle = {
+      disable_on_focus = true,
       timeout = 0,
       text = "Thinking...",
-      disable_on_focus = true,
     },
     text = {
       editing = "Working on {}",

@@ -6,7 +6,13 @@ return {
       formatters = {
         biome = {
           command = "biome",
-          args = { "--stdin" },
+          cwd = require("conform.util").root_file({ "biome.json" }),
+          args = { "format", "--stdin" },
+          formatStdin = true,
+        },
+        prettier = {
+          command = "prettier",
+          cwd = require("conform.util").root_file({ ".prettierrc", ".prettierrc.json" }),
           formatStdin = true,
         },
       },
@@ -14,21 +20,13 @@ return {
         lua = { "stylua" },
         sh = { "shellcheck" },
         tailwind = { "tailwindcss-language-server" },
-        typescript = {
-          "biome",
-          "prettier",
-          timeout_ms = 5000,
-          lsp_format = "fallback",
-          stop_after_first = true,
-        },
-        javascript = {
-          "biome",
-          "prettier",
-          timeout_ms = 5000,
-          lsp_format = "fallback",
-          stop_after_first = true,
-        },
-        astro = { "prettier", "biome" },
+        astro = function(bufnr)
+          if require("conform").get_formatter_info("biome", bufnr).available then
+            return { "biome" }
+          else
+            return { "prettier" }
+          end
+        end,
       },
     }),
     opts = function(_, opts)

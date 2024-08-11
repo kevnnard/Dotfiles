@@ -17,14 +17,8 @@ return {
       },
       prismals = {},
       cssls = {},
-      tailwindcss = {
-        root_dir = function(...)
-          return require("lspconfig.util").root_pattern(".git")(...)
-        end,
-      },
-      tsserver = {
-        enabled = false,
-      },
+      tailwindcss = {},
+      tsserver = {},
       vtsls = {},
       html = {},
       yamlls = {

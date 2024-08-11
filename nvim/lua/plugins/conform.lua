@@ -19,7 +19,13 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         sh = { "shellcheck" },
-        tailwind = { "tailwindcss-language-server" },
+        typescript = function(bufnr)
+          if require("conform").get_formatter_info("biome", bufnr).available then
+            return { "biome" }
+          else
+            return { "prettier" }
+          end
+        end,
         astro = function(bufnr)
           if require("conform").get_formatter_info("biome", bufnr).available then
             return { "biome" }

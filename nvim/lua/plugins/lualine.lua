@@ -3,7 +3,7 @@ return {
   event = "VeryLazy",
   opts = {
     options = {
-      globalstatus = true,
+      globalstatus = false,
       theme = "onedark",
       always_divide_middle = true,
     },

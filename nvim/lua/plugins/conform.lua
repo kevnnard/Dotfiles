@@ -6,8 +6,7 @@ return {
       formatters = {
         biome = {
           command = "biome",
-          cwd = require("conform.util").root_file({ "biome.json" }),
-          args = { "format", "--stdin" },
+          cwd = require("conform.util").root_file({ ".biome.json" }),
           formatStdin = true,
         },
         prettier = {
@@ -19,13 +18,6 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         sh = { "shellcheck" },
-        typescript = function(bufnr)
-          if require("conform").get_formatter_info("biome", bufnr).available then
-            return { "biome" }
-          else
-            return { "prettier" }
-          end
-        end,
         astro = function(bufnr)
           if require("conform").get_formatter_info("biome", bufnr).available then
             return { "biome" }

@@ -49,15 +49,17 @@ return {
       },
     }),
     opts = function(_, opts)
-      if LazyVim.has_extra("formatting.prettier") then
-        opts.formatters_by_ft = opts.formatters_by_ft or {}
-        opts.formatters_by_ft.astro = { "prettier" }
-      end
       if LazyVim.has_extra("formatting.biome") then
         opts.formatters_by_ft = opts.formatters_by_ft or {}
         opts.formatters_by_ft.astro = { "biome" }
         opts.formatters_by_ft.typescript = { "biome" }
         opts.formatters_by_ft.javascript = { "biome" }
+      end
+      if LazyVim.has_extra("formatting.prettier") then
+        opts.formatters_by_ft = opts.formatters_by_ft or {}
+        opts.formatters_by_ft.astro = { "prettier" }
+        opts.formatters_by_ft.typescript = { "prettier" }
+        opts.formatters_by_ft.javascript = { "prettier" }
       end
     end,
   },

@@ -18,8 +18,30 @@ return {
       prismals = {},
       cssls = {},
       tailwindcss = {},
-      tsserver = {},
-      vtsls = {},
+      jsonls = {},
+      tsserver = {
+        enabled = false,
+      },
+      vtsls = {
+        settings = {
+          format = false,
+          vetur = {
+            completion = {
+              autoImport = true,
+              tagCasing = "kebab",
+              useScaffoldSnippets = false,
+            },
+            validation = {
+              template = true,
+              style = true,
+              script = true,
+            },
+            experimental = {
+              templateInterpolationService = false,
+            },
+          },
+        },
+      },
       html = {},
       yamlls = {
         settings = {

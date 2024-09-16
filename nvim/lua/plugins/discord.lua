@@ -14,7 +14,9 @@ return {
       show_repository = false,
       workspace_blacklist = {
         "V3",
-        "DOTFIES",
+        "DOTFILES",
+        "BACKEND",
+        "FRONTEND",
       },
     },
     lsp = {

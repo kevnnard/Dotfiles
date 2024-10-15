@@ -52,8 +52,8 @@ return {
       if LazyVim.has_extra("formatting.biome") then
         opts.formatters_by_ft = opts.formatters_by_ft or {}
         opts.formatters_by_ft.astro = { "biome" }
-        -- opts.formatters_by_ft.typescript = { "biome" }
-        -- opts.formatters_by_ft.javascript = { "biome" }
+        opts.formatters_by_ft.typescript = { "biome" }
+        opts.formatters_by_ft.javascript = { "biome" }
       end
       if LazyVim.has_extra("formatting.prettier") then
         opts.formatters_by_ft = opts.formatters_by_ft or {}

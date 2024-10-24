@@ -57,7 +57,7 @@ vim.keymap.set(
 -----------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------
 -- OIL KEYMAPS INIT
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "<backspace>", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 -- TELESCOPE
 vim.keymap.set("n", "<leader>fx", "<CMD>TodoTelescope<CR>", { desc = "Find Todos" })

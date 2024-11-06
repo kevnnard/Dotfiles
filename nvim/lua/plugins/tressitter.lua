@@ -7,10 +7,8 @@ return {
       ensure_installed = {
         "astro",
         "gitignore",
-        "go",
         "graphql",
         "http",
-        "rust",
         "sql",
         "prisma",
         "typescript",

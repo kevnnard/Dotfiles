@@ -71,3 +71,31 @@ vim.keymap.set("n", "<leader>Mt", "<CMD>CordTogglePresence<CR>", { desc = "Toggl
 vim.keymap.set("n", "<leader>Mm", "<CMD>CordToggleIdle<CR>", { desc = "Toggle Idle" })
 vim.keymap.set("n", "<leader>Mi", "<CMD>CordUnidle<CR>", { desc = "Hide Idle Stautus" })
 vim.keymap.set("n", "<leader>Mn", "<CMD>CordWorkspace 💤 <CR>", { desc = "Change name Workspace" })
+
+-- Delete all buffers but the current one
+vim.keymap.set(
+  "n",
+  "<leader>bq",
+  '<Esc>:%bdelete|edit #|normal`"<Return>',
+  { desc = "Delete other buffers but the current one" }
+)
+
+-- Save file with custom message
+vim.keymap.set("n", "<C-s>", "<CMD>lua SaveFile()<CR>", { desc = "Save file" })
+function SaveFile()
+  if vim.fn.empty(vim.fn.expand("%:t")) == 1 then
+    vim.notify("No file to save", vim.log.levels.WARN)
+    return
+  end
+
+  local filename = vim.fn.expand("%:t")
+  local success, err = pcall(function()
+    vim.cmd("silent! write")
+  end)
+
+  if success then
+    vim.notify(filename .. " Saved!")
+  else
+    vim.notify("Error: " .. err, vim.log.levels.ERROR)
+  end
+end

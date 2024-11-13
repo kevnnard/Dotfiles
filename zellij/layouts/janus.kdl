@@ -1,15 +1,28 @@
 layout {
-    tab name="nvim" focus=true cwd="~/Documents/OCMI/JANUS/" {
-        pane { 
-          command "nvim"
+    tab name="DB" split_direction="horizontal" cwd="~/Documents/OCMI/JANUS/" {
+      pane size="20%"  split_direction="vertical" {
+        pane command="podman-compose" close_on_exit=true {
+          args "up"
+         }
+      }
+      pane size="80%" stacked=true {
+        pane size="50%" command="lazydocker"
+        pane size="50%" expanded=true command="dblab" {
+          args "--url" "postgres://root:root@localhost:5432/methistos"
         }
+      }  
     }
 
-    tab name="shell" split_direction="vertical" cwd="~/Documents/OCMI/JANUS/" {
+    tab name="Nvim" focus=true cwd="~/Documents/OCMI/JANUS/" {
+        pane command="nvim"
+    }
+
+    tab name="Shells" split_direction="vertical" cwd="~/Documents/OCMI/JANUS/" {
         pane
         pane 
     }
 
+    
     default_tab_template {
         pane size=1 borderless=true {
             plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {

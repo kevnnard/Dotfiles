@@ -1,11 +1,11 @@
 layout {
-    tab name="Three App" focus=true cwd="~/Documents/KEVNNARD/GRUPOR/V3/" {
+    tab name="Three" focus=true cwd="~/Documents/KEVNNARD/GRUPOR/V3/" {
         pane { 
           command "nvim"
         }
     }
 
-    tab name="shell" split_direction="vertical" cwd="~/Documents/KEVNNARD/GRUPOR/V3/" {
+    tab name="Shells" split_direction="vertical" cwd="~/Documents/KEVNNARD/GRUPOR/V3/" {
         pane
     }
 

@@ -1,3 +1,13 @@
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export PATH="/opt/homebrew/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+
+export PATH="/Users/kevnnard/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+
+# P10K ZSH CONFIG
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -6,11 +16,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -18,6 +28,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,9 +94,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose pj)
+plugins=(git docker docker-compose pj zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+
+# PLUGINS 
+PROJECT_PATHS=(~/Documents ~/Documents/OCMI ~/Documents/THREE ~/Documents/KEVNNARD ~/Documents/KEVNNARD/GRUPOR)
 
 # User configuration
 
@@ -97,98 +115,45 @@ else
   export EDITOR='vim'
 fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Compilation flags
+# export ARCHFLAGS="-arch $(uname -m)"
+
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-source /Users/kevnnard/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
-# fnm
-export PATH="/Users/kevnnard/Library/Application Support/fnm:$PATH"
-eval "`fnm env`"
 
-# pnpm
-export PNPM_HOME="/Users/kevnnard/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 
-# bun completions
-[ -s "/Users/kevnnard/.bun/_bun" ] && source "/Users/kevnnard/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# Ruby Version Managerexport
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-
-# PLUGINS 
-#  PJ PLUGIN 
-PROJECT_PATHS=(~/Documents ~/Documents/OCMI ~/Documents/THREE ~/Documents/KEVNNARD ~/Documents/KEVNNARD/GRUPOR)
-
-# FZF PLUGIN
-export FZF_BASE=/Users/kevnnard/fzf/install/dir
-
-# Zellij 
-
-function zr () { zellij run --name "$*" -- zsh -ic "$*";}
-function zrf () { zellij run --name "$*" --floating -- zsh -ic "$*";}
-function zri () { zellij run --name "$*" --in-place -- zsh -ic "$*";}
-function ze () { zellij edit "$*";}
-function zef () { zellij edit --floating "$*";}
-function zei () { zellij edit --in-place "$*";}
-function zpipe () { 
-  if [ -z "$1" ]; then
-    zellij pipe;
-  else 
-    zellij pipe -p $1;
-  fi
-}
- # bash and zsh
-if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
-##### WHAT YOU WANT TO DISABLE FOR WARP - BELOW
-    # Unsupported plugin/prompt code here, i.e.
-    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
-##### WHAT YOU WANT TO DISABLE FOR WARP - ABOVE
-fi
-
-# if [[ -z "$ZELLIJ" ]]; then
-#     if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-#         zellij attach -c
-#     else
-#         zellij
-#     fi
-#
-#     if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-#         exit
-#     fi
-# fi
 
 # ALIASES                                                             
 
+# ZELLIJ ALIASES
 alias z="zellij"
+alias zj="zellij --layout .config/zellij/layouts/janus.kdl"
+alias ztr="zellij --layout .config/zellij/layouts/three.kdl"
+
+# VIM ALIASES
 alias vmd="nvim"
 alias vm="nvim ."
 
+# SHELL ALIASES
 alias sshc="ssh -i ~/.ssh"
-
 alias zshrc="nvim ~/.zshrc"
 
+# LAZY ALIASES
 alias lg="lazygit"
+alias ldd="lazydocker"
 
+# PNPM ALIASES
 alias pm="pnpm"
 alias pmu="pnpm up"
 alias pmi="pnpm i"
@@ -200,13 +165,28 @@ alias pmr="pnpm store prune"
 alias pmx="pnpm exec"
 alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
 
-# Bun ALIASES 
-alias buna="bun add"
-alias buni="bun install"
-alias bunr="bun remove"
-alias bunr="bun run"
-alias bund="bun run dev"
-alias bunb="bun run build"
-alias buns="bun run start"
-alias bunv="curl -fsSL https://bun.sh/install | bash"
+# PODMAN ALIASES
+alias pod="podman"
+alias podi="podman machine init"
+alias pods="podman machine start"
+alias podb="podman build"
+alias podr="podman run"
+alias podc="podman container"
+alias podi="podman image"
+alias podv="podman volume"
+alias podn="podman network"
+alias podl="podman logs"
 
+export PATH="$HOME/Library/Application Support/Herd/bin:$PATH"
+
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/kevnnard/Library/Application Support/Herd/config/php/83/"
+
+# pnpm
+export PNPM_HOME="/Users/kevnnard/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

@@ -64,13 +64,13 @@ vim.keymap.set("n", "<leader>fx", "<CMD>TodoTelescope<CR>", { desc = "Find Todos
 vim.keymap.set("n", "<leader>fn", "<CMD>Telescope notify<CR>", { desc = "Find Notifications" })
 
 -- DISCORD KEYMAPS
-vim.keymap.set("n", "<leader>Ma", "<CMD>CordConnect<CR>", { desc = "Active Discord Status" })
-vim.keymap.set("n", "<leader>Md", "<CMD>CordDisconnect<CR>", { desc = "Deactive Discord Status" })
-vim.keymap.set("n", "<leader>Mr", "<CMD>CordReconnect<CR>", { desc = "Reconnect Discord" })
-vim.keymap.set("n", "<leader>Mt", "<CMD>CordTogglePresence<CR>", { desc = "Toggle Discord Status" })
-vim.keymap.set("n", "<leader>Mm", "<CMD>CordToggleIdle<CR>", { desc = "Toggle Idle" })
-vim.keymap.set("n", "<leader>Mi", "<CMD>CordUnidle<CR>", { desc = "Hide Idle Stautus" })
-vim.keymap.set("n", "<leader>Mn", "<CMD>CordWorkspace 💤 <CR>", { desc = "Change name Workspace" })
+-- vim.keymap.set("n", "<leader>Ma", "<CMD>CordConnect<CR>", { desc = "Active Discord Status" })
+-- vim.keymap.set("n", "<leader>Md", "<CMD>CordDisconnect<CR>", { desc = "Deactive Discord Status" })
+-- vim.keymap.set("n", "<leader>Mr", "<CMD>CordReconnect<CR>", { desc = "Reconnect Discord" })
+-- vim.keymap.set("n", "<leader>Mt", "<CMD>CordTogglePresence<CR>", { desc = "Toggle Discord Status" })
+-- vim.keymap.set("n", "<leader>Mm", "<CMD>CordToggleIdle<CR>", { desc = "Toggle Idle" })
+-- vim.keymap.set("n", "<leader>Mi", "<CMD>CordUnidle<CR>", { desc = "Hide Idle Stautus" })
+-- vim.keymap.set("n", "<leader>Mn", "<CMD>CordWorkspace 💤 <CR>", { desc = "Change name Workspace" })
 
 -- Delete all buffers but the current one
 vim.keymap.set(

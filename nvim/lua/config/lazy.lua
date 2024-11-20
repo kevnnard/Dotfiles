@@ -21,8 +21,6 @@ require("lazy").setup({
       },
     },
     -- import any extras modules here
-    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
-    { import = "lazyvim.plugins.extras.ai.copilot" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
 
@@ -47,7 +45,6 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.util.dot" },
     { import = "lazyvim.plugins.extras.util.octo" },
-    { import = "lazyvim.plugins.extras.util.project" },
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
 
     { import = "lazyvim.plugins.extras.test.core" },

@@ -166,7 +166,6 @@ alias pmx="pnpm exec"
 alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
 
 # PODMAN ALIASES
-alias pod="podman"
 alias podi="podman machine init"
 alias pods="podman machine start"
 alias podb="podman build"
@@ -190,3 +189,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+export GPG_TTY=$(tty)

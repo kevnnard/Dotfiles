@@ -1,25 +1,26 @@
 layout {
-    tab name="DB" split_direction="horizontal" cwd="~/Documents/OCMI/JANUS/" {
-      pane size="20%"  split_direction="vertical" {
-        pane command="podman-compose" close_on_exit=true {
-          args "up"
-         }
+    tab name="Herd" split_direction="vertical" cwd="~/Herd/" {
+      pane size="25%" cwd="app-array-dashboard" close_on_exit=true {
+        command "git"
+        args "pull"
       }
-      pane size="80%" stacked=true {
-        pane size="50%" command="lazydocker"
-        pane size="50%" expanded=true command="dblab" {
-          args "--url" "postgres://root:root@localhost:5432/methistos"
-        }
-      }  
+      pane size="25%" cwd="ocmi-forms" close_on_exit=true {
+        command "git"
+        args "pull"
+      }
+      pane size="25%" cwd="app-array-dashboard" {
+        command "yarn"
+        args "dev"
+      }
+      pane size="25%" cwd="ocmi-forms" {
+        command "yarn"
+        args "dev"
+      }
     }
 
-    tab name="Nvim" focus=true cwd="~/Documents/OCMI/JANUS/" {
-        pane command="nvim"
-    }
-
-    tab name="Shells" split_direction="vertical" cwd="~/Documents/OCMI/JANUS/" {
-        pane
-        pane 
+    tab name="App-Array" split_direction="vertical" focus=true cwd="~/Repositories/app-array/" {
+        pane size="75%" command="nvim"
+        pane size="35%" 
     }
 
     

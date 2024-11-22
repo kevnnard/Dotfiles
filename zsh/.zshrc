@@ -1,9 +1,13 @@
+# PATH CONFIGURATION
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Homebrew config
 export PATH="/opt/homebrew/bin:$PATH"
 
+# Ruby config
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
+# fnm config
 export PATH="/Users/kevnnard/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
 
@@ -99,7 +103,7 @@ plugins=(git docker docker-compose pj zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # PLUGINS 
-PROJECT_PATHS=(~/Documents ~/Documents/OCMI ~/Documents/THREE ~/Documents/KEVNNARD ~/Documents/KEVNNARD/GRUPOR)
+PROJECT_PATHS=(~/Documents ~/Repositories)
 
 # User configuration
 
@@ -129,60 +133,21 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # For a full list of active aliases, run `alias`.
 #
 
+$ZSH_CUSTOM/aliases.zsh
+
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
+# END P10K ZSH CONFIG
 
 
 
-# ALIASES                                                             
-
-# ZELLIJ ALIASES
-alias z="zellij"
-alias zj="zellij --layout .config/zellij/layouts/janus.kdl"
-alias ztr="zellij --layout .config/zellij/layouts/three.kdl"
-
-# VIM ALIASES
-alias vmd="nvim"
-alias vm="nvim ."
-
-# SHELL ALIASES
-alias sshc="ssh -i ~/.ssh"
-alias zshrc="nvim ~/.zshrc"
-
-# LAZY ALIASES
-alias lg="lazygit"
-alias ldd="lazydocker"
-
-# PNPM ALIASES
-alias pm="pnpm"
-alias pmu="pnpm up"
-alias pmi="pnpm i"
-alias pma="pnpm add"
-alias pmb="pnpm run build"
-alias pmd="pnpm run dev"
-alias pmg="pnpm start"
-alias pmr="pnpm store prune"
-alias pmx="pnpm exec"
-alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
-
-# PODMAN ALIASES
-alias podi="podman machine init"
-alias pods="podman machine start"
-alias podb="podman build"
-alias podr="podman run"
-alias podc="podman container"
-alias podi="podman image"
-alias podv="podman volume"
-alias podn="podman network"
-alias podl="podman logs"
-
+# Herd injected PHP 8.0 configuration.
 export PATH="$HOME/Library/Application Support/Herd/bin:$PATH"
-
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/kevnnard/Library/Application Support/Herd/config/php/83/"
 
-# pnpm
+# PNPM_HOME
 export PNPM_HOME="/Users/kevnnard/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
@@ -190,4 +155,5 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# GPG_TTY
 export GPG_TTY=$(tty)

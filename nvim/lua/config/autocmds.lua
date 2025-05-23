@@ -16,3 +16,18 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.conceallevel = 0
   end,
 })
+
+vim.api.nvim_create_user_command("DuSize", function(opts)
+  local path = opts.args ~= "" and opts.args or "."
+  local handle = io.popen("du -sh " .. path)
+  if handle then
+    local result = handle:read("*a")
+    handle:close()
+    print(result)
+  else
+    print("Error ejecutando du")
+  end
+end, {
+  nargs = "?",
+  desc = "Muestra el tamaño de un archivo o carpeta usando du -sh",
+})

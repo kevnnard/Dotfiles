@@ -1,24 +1,37 @@
 layout {
     tab name="Herd" split_direction="vertical" cwd="~/Herd/" {
-      pane size="25%" cwd="app-array-dashboard" close_on_exit=true {
+      // pane size="1%" close_on_exit=true {
+      //   command "herd"
+      //   args "start"
+      // }
+      pane size="1%" cwd="app-array-dashboard" close_on_exit=true {
         command "git"
         args "pull"
       }
-      pane size="25%" cwd="ocmi-forms" close_on_exit=true {
+      pane size="1%" cwd="ocmi-forms" close_on_exit=true {
         command "git"
         args "pull"
       }
-      pane size="25%" cwd="app-array-dashboard" {
-        command "yarn"
-        args "dev"
+
+      pane size="1%" cwd="janus-phoenix" close_on_exit=true {
+        command "git"
+        args "pull"
       }
-      pane size="25%" cwd="ocmi-forms" {
-        command "yarn"
-        args "dev"
+
+      pane size="33%" split_direction="horizontal" {
+        pane size="33%" cwd="app-array-dashboard"
+        pane size="33%" cwd="app-array-dashboard" command="zsh" {
+          command "zsh"
+          args "-i"
+          args "-c"
+          args "\"share\""
+        }
       }
+      pane size="33%" cwd="ocmi-forms"
+      pane size="33%" cwd="janus-phoenix"
     }
 
-    tab name="App-Array" split_direction="vertical" focus=true cwd="~/Repositories/app-array/" {
+    tab name="App-Array" split_direction="vertical" focus=true cwd="app-array" {
         pane size="75%" command="nvim"
         pane size="35%" 
     }

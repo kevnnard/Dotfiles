@@ -3,8 +3,7 @@ gui:
   authorColors:
     # use red for John Smith
     "Kevin Londoño": "#77F1B7"
-    "Kevnnard MacOs": "#77F1B7"
-    "KevnnardFedora": "#77F1B7"
+    "Kevnnard MacOS": "#77F1B7"
     # use blue for other authors
     # "*": "#ff2f05"
   branchColors:
@@ -20,8 +19,8 @@ gui:
     selectedLineBgColor:
       - reverse
       - red
-
+  sidePanelWidth: 0.2
 git:
   paging:
-    colorArg: always
-    pager: diff-so-fancy
+    colorArg: never
+    pager: ydiff -p cat -s --wrap --width={{columnWidth}}

@@ -10,7 +10,6 @@ return {
       "tailwindcss-language-server",
       "typescript-language-server",
       "shopify-cli",
-      "shopify-theme-check",
       "solargraph",
       "dockerfile-language-server",
       "docker-compose-language-service",

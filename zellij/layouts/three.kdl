@@ -1,12 +1,21 @@
 layout {
-    tab name="Three" focus=true cwd="~/Documents/KEVNNARD/GRUPOR/V3/" {
-        pane { 
-          command "nvim"
+    tab name="Three Trackr" hide_floating_panes=true cwd="~/Repositories/three-trackr/" split_direction="vertical" {
+        pane close_on_exit=true size="1%" {
+          command "open"
+          args "/Applications/Docker.app"
         }
-    }
-
-    tab name="Shells" split_direction="vertical" cwd="~/Documents/KEVNNARD/GRUPOR/V3/" {
-        pane
+        pane size="100%" name="Nvim" {
+          command "nvim"
+        } 
+        floating_panes  {
+          pane name="Terminal Dev"{
+            x 1
+            y 1
+            width "100%"
+          }
+          pane name="Package/Supabase" x="1" y="50%" width="45%" cwd="packages/supabase/supabase"
+          pane name="Package/Database" x="50%" y="50%" width="45%" height="45%" cwd="packages/database"
+        }
     }
 
     default_tab_template {

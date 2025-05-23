@@ -6,6 +6,7 @@ return {
     opts = {
       ensure_installed = {
         "astro",
+        "css",
         "gitignore",
         "graphql",
         "http",
@@ -55,6 +56,11 @@ return {
         },
       })
       vim.treesitter.language.register("markdown", "mdx")
+      vim.filetype.add({
+        extensions = {
+          astro = "astro",
+        },
+      })
     end,
   },
 }

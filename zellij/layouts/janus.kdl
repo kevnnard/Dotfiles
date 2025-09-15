@@ -31,7 +31,7 @@ layout {
       pane size="33%" cwd="janus-phoenix"
     }
 
-    tab name="App-Array" split_direction="vertical" focus=true cwd="app-array" {
+    tab name="App-Array" split_direction="vertical" focus=true cwd="~/Herd/app-array" {
         pane size="75%" command="nvim"
         pane size="35%" 
     }

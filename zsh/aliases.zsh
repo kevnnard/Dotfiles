@@ -33,3 +33,7 @@ alias pmv="curl -fsSL https://get.pnpm.io/install.sh | sh -s"
 # DOCKER ALIASES
 alias docker-up="open /Applications/Docker.app"
 alias dci="docker container init"
+
+
+# SSH ALIASES
+alias sshgr="ssh -i ~/.ssh/id_ed25519 grupor@165.232.145.129"

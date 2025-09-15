@@ -8,7 +8,20 @@ return {
       prismals = {},
       cssls = {},
       tailwindcss = {},
-      jsonls = {},
+      jsonls = {
+        enabled = true,
+        settings = {
+          json = {
+            validate = { enable = true },
+            schemas = require("schemastore").json.schemas(),
+            format = {
+              enable = true,
+              insertSpaces = true,
+              tabSize = 2,
+            },
+          },
+        },
+      },
       tsserver = {
         enabled = false,
       },

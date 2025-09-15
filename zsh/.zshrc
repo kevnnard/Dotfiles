@@ -15,8 +15,6 @@ export PATH="/Users/kevnnard/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
 
 # P10K ZSH CONFIG
-#
-bindkey '\^L' clear-screen
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -108,7 +106,7 @@ plugins=(git docker docker-compose pj zsh-syntax-highlighting brew)
 source $ZSH/oh-my-zsh.sh
 
 # PLUGINS 
-PROJECT_PATHS=(~/Documents ~/Repositories ~/Herd)
+PROJECT_PATHS=(~/Documents ~/Repositories ~/Herd ~/iCloud_Drive)
 
 # User configuration
 
@@ -192,3 +190,13 @@ function cls() {
   printf "\e[3J"
 }
 alias cleanmac='zsh ~/scripts/cleanmac-all.sh'
+
+[ -s "/Users/kevnnard/.bun/_bun" ] && source "/Users/kevnnard/.bun/_bun"
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Android SDK
+export ANDROID_SDK_ROOT=/Users/kevnnard/Library/Android/sdk
+export ANDROID_HOME=/Users/kevnnard/Library/Android/sdk
+export PATH=$PATH:/Users/kevnnard/Library/Android/sdk/emulator:/Users/kevnnard/Library/Android/sdk/platform-tools
